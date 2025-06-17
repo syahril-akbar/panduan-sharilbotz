@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SharilBotz - Panduan Lengkap Asisten WhatsApp Anda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* slate-900 */
+            color: #cbd5e1; /* slate-300 */
+        }
+        .nav-link {
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #38bdf8; /* sky-400 */
+            transform: translateY(-2px);
+        }
+        .command-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(56, 189, 248, 0.1), 0 4px 6px -2px rgba(56, 189, 248, 0.05);
+        }
+        .tab-button.active {
+            background-color: #38bdf8;
+            color: #0f172a;
+        }
+        .guide-tab-button.active {
+             background-color: #38bdf8;
+             color: #0f172a;
+             border-color: #38bdf8;
+        }
+        .faq-question.active + .faq-answer {
+            max-height: 1000px;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            opacity: 1;
+        }
+        .faq-answer {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: all 0.5s ease-in-out;
+        }
+        code {
+            background-color: #334155;
+            color: #f8fafc;
+            padding: 0.2em 0.4em;
+            margin: 0;
+            font-size: 85%;
+            border-radius: 6px;
+        }
+        .guide-card {
+            background-color: #1e293b; /* slate-800 */
+        }
+        .sub-guide-card {
+            background-color: rgba(15, 23, 42, 0.5); /* slate-900/50 */
+            border: 1px solid #334155; /* slate-700 */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigasi -->
+    <header id="header" class="bg-slate-900/80 backdrop-blur-sm sticky top-0 z-50 shadow-lg shadow-sky-900/10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-bold text-white">Sharil<span class="text-sky-400">Botz</span></a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#guide" class="nav-link font-medium">Panduan</a>
+                <a href="#commands" class="nav-link font-medium">Perintah</a>
+                <a href="#faq" class="nav-link font-medium">FAQ</a>
+            </nav>
+            <a href="https://s.id/sharil-bot" target="_blank" class="hidden md:inline-block bg-sky-500 text-white font-semibold px-5 py-2 rounded-lg hover:bg-sky-600 transition-colors">
+                Website Resmi
+            </a>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#guide" class="block py-2 px-6 text-sm hover:bg-slate-700">Panduan</a>
+            <a href="#commands" class="block py-2 px-6 text-sm hover:bg-slate-700">Perintah</a>
+            <a href="#faq" class="block py-2 px-6 text-sm hover:bg-slate-700">FAQ</a>
+            <a href="https://s.id/sharil-bot" target="_blank" class="block py-2 px-6 text-sm hover:bg-slate-700">Website Resmi</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
+            <div class="absolute inset-0 bg-slate-900/50 backdrop-blur-sm z-10"></div>
+            <div class="absolute inset-0 z-0">
+                 <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-sky-500 rounded-full mix-blend-lighten filter blur-3xl opacity-20 animate-blob"></div>
+                <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-lighten filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+                <div class="absolute top-1/2 right-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-lighten filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+            </div>
+            <div class="container mx-auto px-6 py-20 relative z-20">
+                <p class="text-sky-400 font-semibold mb-2">Selamat datang di panduan definitif untuk SharilBotz</p>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+                    Ubah Cara Anda Berinteraksi di WhatsApp
+                </h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-slate-300 mb-8">
+                    Jadikan interaksi Anda lebih efisien, aman, dan menyenangkan dengan kekuatan SharilBotz. Panduan ini akan mengubah Anda dari pengguna awal menjadi ahli.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="#guide" class="bg-sky-500 text-white font-bold py-3 px-8 rounded-full hover:bg-sky-600 transition-all transform hover:scale-105 w-full sm:w-auto">
+                        Mulai Belajar
+                    </a>
+                    <a href="#commands" class="bg-slate-700 text-white font-bold py-3 px-8 rounded-full hover:bg-slate-600 transition-all transform hover:scale-105 w-full sm:w-auto">
+                        Lihat Perintah
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- User Guide Section -->
+        <section id="guide" class="py-20 bg-slate-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Panduan Pengguna Lengkap</h2>
+                    <p class="text-slate-400 max-w-2xl mx-auto">Pelajari setiap aspek SharilBotz, dari konfigurasi dasar hingga fitur tercanggih.</p>
+                </div>
+
+                <!-- Guide Tabs -->
+                 <div id="guide-tabs" class="mb-8 flex flex-wrap justify-center gap-2 md:gap-4">
+                    <button data-tab="guide-1" class="guide-tab-button active text-sm md:text-base font-semibold px-4 py-2 rounded-full transition-colors border border-slate-600">Konfigurasi Inti</button>
+                    <button data-tab="guide-2" class="guide-tab-button text-sm md:text-base font-semibold px-4 py-2 rounded-full transition-colors border border-slate-600">Kustomisasi</button>
+                    <button data-tab="guide-3" class="guide-tab-button text-sm md:text-base font-semibold px-4 py-2 rounded-full transition-colors border border-slate-600">Otomatisasi Status</button>
+                    <button data-tab="guide-4" class="guide-tab-button text-sm md:text-base font-semibold px-4 py-2 rounded-full transition-colors border border-slate-600">Moderasi Grup</button>
+                    <button data-tab="guide-5" class="guide-tab-button text-sm md:text-base font-semibold px-4 py-2 rounded-full transition-colors border border-slate-600">Konfigurasi Teknis</button>
+                    <button data-tab="guide-7" class="guide-tab-button text-sm md:text-base font-semibold px-4 py-2 rounded-full transition-colors border border-slate-600">Tips & Trik</button>
+                </div>
+                
+                <!-- Guide Content -->
+                <div class="max-w-4xl mx-auto">
+                    <!-- Tab 1: Konfigurasi Inti -->
+                    <div data-tab-content="guide-1" class="guide-card p-6 md:p-8 rounded-xl space-y-8">
+                        <div class="text-center">
+                            <h2 class="text-2xl font-bold text-white mb-2">Konfigurasi Inti & Personalisasi Bot</h2>
+                            <p class="text-slate-400">Pengaturan fundamental yang membentuk identitas dan perilaku dasar bot Anda.</p>
+                        </div>
+                        <hr class="border-slate-700">
+                        
+                        <!-- Sub-section card -->
+                        <div class="sub-guide-card p-6 rounded-lg">
+                            <h3 class="text-xl font-bold text-sky-400 mb-3">Bahasa (BOT_LANG)</h3>
+                            <p class="text-slate-300 leading-relaxed">Sesuaikan bahasa yang digunakan bot dalam memberikan respons. Pengaturan bahasa yang tepat akan meningkatkan pengalaman pengguna secara signifikan.</p>
+                            <p class="text-slate-300 leading-relaxed mt-4"><strong>Contoh Perintah:</strong> <code>.setvar BOT_LANG=id</code></p>
+                            <blockquote class="mt-4 border-l-4 border-slate-600 pl-4 text-slate-400 italic">Setelah mengatur variabel ini, Anda harus me-restart bot dengan perintah <code>.reboot</code> agar perubahan aktif. Pilihan populer: id, en, es.</blockquote>
+                        </div>
+                        
+                        <!-- Sub-section card -->
+                        <div class="sub-guide-card p-6 rounded-lg">
+                            <h3 class="text-xl font-bold text-sky-400 mb-3">Awalan Perintah (PREFIX)</h3>
+                            <p class="text-slate-300 leading-relaxed">Prefix adalah karakter pemicu sebelum setiap perintah. Pengaturan yang tepat menentukan seberapa mudah akses ke bot Anda.</p>
+                            <ul class="mt-4 space-y-3 list-disc pl-5 text-slate-300">
+                                <li><strong>Satu Karakter:</strong> Cepat dan efisien. Contoh: <code>.setvar PREFIX=!</code></li>
+                                <li><strong>Multi-Karakter:</strong> Sangat fleksibel. Contoh: <code>.setvar PREFIX=^.,/</code></li>
+                                <li><strong>Tanpa Awalan (null):</strong> Memanggil perintah langsung. <strong>Sangat tidak disarankan untuk grup publik.</strong></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Sub-section card -->
+                        <div class="sub-guide-card p-6 rounded-lg">
+                            <h3 class="text-xl font-bold text-sky-400 mb-3">Zona Waktu (TIMEZONE)</h3>
+                            <p class="text-slate-300 leading-relaxed">Krusial untuk semua fitur berbasis waktu seperti penjadwalan. Ini menyesuaikan jam internal bot dengan lokasi geografis Anda.</p>
+                            <p class="text-slate-300 leading-relaxed mt-4"><strong>Contoh Perintah:</strong> <code>.setvar TIMEZONE=Asia/Jakarta</code></p>
+                        </div>
+
+                        <!-- Sub-section card -->
+                        <div class="sub-guide-card p-6 rounded-lg">
+                            <h3 class="text-xl font-bold text-sky-400 mb-3">Status & Tampilan</h3>
+                             <p class="text-slate-300 leading-relaxed">Atur bagaimana citra bot Anda terlihat oleh pengguna lain di WhatsApp.</p>
+                             <ul class="mt-4 space-y-3 list-disc pl-5 text-slate-300">
+                                <li><strong>Selalu Online (ALWAYS_ONLINE):</strong> Membuat status bot selalu terlihat "online". Aktifkan dengan <code>true</code>.</li>
+                                <li><strong>Tanda Dibaca (SEND_READ):</strong> Mengatur apakah bot akan mengirimkan centang biru. Nonaktifkan dengan <code>false</code> untuk privasi.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Sub-section card -->
+                        <div class="sub-guide-card p-6 rounded-lg">
+                            <h3 class="text-xl font-bold text-sky-400 mb-3">Hak Akses (SUDO)</h3>
+                            <p class="text-slate-300 leading-relaxed">SUDO (Superuser Do) adalah tingkat akses tertinggi. Memberikan SUDO sama dengan memberikan kunci penuh ke seluruh fungsi bot.</p>
+                            <p class="text-slate-300 leading-relaxed mt-4"><strong>Cara Mengatur:</strong> Masukkan nomor telepon format internasional. Pisahkan dengan koma jika lebih dari satu.</p>
+                            <blockquote class="mt-4 border-l-4 border-slate-600 pl-4 text-slate-400 italic"><strong>Peringatan Keamanan:</strong> Berikan hanya kepada orang yang benar-benar Anda percayai. Contoh: <code>.setvar SUDO=6281234567890</code></blockquote>
+                        </div>
+                    </div>
+                    
+                    <!-- Tab 2: Kustomisasi -->
+                    <div data-tab-content="guide-2" class="guide-card p-6 md:p-8 rounded-xl space-y-8 hidden">
+                         <div class="text-center">
+                            <h2 class="text-2xl font-bold text-white mb-2">Kustomisasi Interaksi & Tampilan</h2>
+                            <p class="text-slate-400">Personalisasi ini membuat bot terasa lebih hidup dan terintegrasi dengan komunitas Anda.</p>
+                        </div>
+                        <hr class="border-slate-700">
+
+                        <div class="sub-guide-card p-6 rounded-lg">
+                            <h3 class="text-xl font-bold text-sky-400 mb-3">Pesan Otomatis</h3>
+                            <ul class="space-y-4 list-disc pl-5 text-slate-300">
+                                <li><strong>Pesan Pribadi (PERSONAL_MESSAGE):</strong> Kartu nama digital bot Anda. Dikirim otomatis saat seseorang mengirim pesan pribadi pertama kali. Berguna untuk instruksi awal.
+                                    <p class="mt-2">Contoh: <code>.setvar PERSONAL_MESSAGE=Hai! Terima kasih telah menghubungi. Ketik .menu untuk memulai.</code></p>
+                                </li>
+                                <li><strong>Pesan Mulai (DISABLE_START_MESSAGE):</strong> Nonaktifkan pesan "connected" saat bot restart untuk mengurangi notifikasi yang mengganggu.
+                                    <p class="mt-2">Contoh: <code>.setvar DISABLE_START_MESSAGE=true</code></p>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="sub-guide-card p-6 rounded-lg">
+                            <h3 class="text-xl font-bold text-sky-400 mb-3">Kustomisasi Konten</h3>
+                             <ul class="space-y-4 list-disc pl-5 text-slate-300">
+                                <li><strong>Info Stiker (STICKER_PACKNAME):</strong> Beri merek pada setiap stiker buatan bot.
+                                    <p class="mt-2">Format: <code>[Nama Paket];[NamaPembuat]</code></p>
+                                    <p>Contoh: <code>.setvar STICKER_PACKNAME=GrupAsik;DibuatOlehBot</code></p>
+                                </li>
+                                 <li><strong>Tipe Daftar (LIST_TYPE):</strong> Ubah tampilan hasil pencarian.
+                                    <p class="mt-2">Pilihan: <code>text</code> (teks biasa) atau <code>poll</code> (polling interaktif).</p>
+                                     <p>Contoh: <code>.setvar LIST_TYPE=poll</code></p>
+                                 </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="sub-guide-card p-6 rounded-lg">
+                            <h3 class="text-xl font-bold text-sky-400 mb-3">Umpan Balik (Feedback)</h3>
+                            <p class="text-slate-300 leading-relaxed"><strong>Reaksi Perintah (CMD_REACTION):</strong> Bot akan memberikan feedback visual instan dengan reaksi emoji (✅ atau ❌) pada pesan perintah Anda. Ini mengonfirmasi perintah telah diproses tanpa memenuhi chat.</p>
+                             <p class="text-slate-300 leading-relaxed mt-4">Aktifkan dengan: <code>.setvar CMD_REACTION=true</code></p>
+                        </div>
+                    </div>
+                    
+                    <!-- Tab 3: Otomatisasi Status -->
+                    <div data-tab-content="guide-3" class="guide-card p-6 md:p-8 rounded-xl space-y-8 hidden">
+                        <div class="text-center">
+                            <h2 class="text-2xl font-bold text-white mb-2">Interaksi Status WhatsApp Otomatis</h2>
+                            <p class="text-slate-400">Ubah bot Anda menjadi pengamat status yang aktif dan interaktif.</p>
+                        </div>
+                        <hr class="border-slate-700">
+
+                        <div class="sub-guide-card p-6 rounded-lg">
+                            <h3 class="text-xl font-bold text-sky-400 mb-3">Melihat Status (AUTO_STATUS_VIEW)</h3>
+                            <p class="text-slate-300 leading-relaxed">Fitur canggih untuk melihat atau mengunduh status dari kontak yang Anda tentukan. Berguna untuk pengarsipan, pemantauan, atau menunjukkan keaktifan.</p>
+                             <ul class="mt-4 space-y-3 list-disc pl-5 text-slate-300">
+                                <li><strong>Mode Default:</strong> Melihat dan mengunduh semua status. Gunakan <code>on</code>.</li>
+                                <li><strong>Tanpa Unduh:</strong> Hanya melihat, hemat penyimpanan. Gunakan <code>no-dl</code>.</li>
+                                <li><strong>Mode Siluman:</strong> Hanya mengunduh, tanpa ketahuan. Gunakan <code>hide-view</code>.</li>
+                                <li><strong>Filter Kontak:</strong> Pilih kontak yang statusnya ingin dilihat. Gunakan <code>only-view jid1,jid2</code>.</li>
+                                <li><strong>Tunda Acak:</strong> Meniru perilaku manusia agar terlihat natural. Gunakan <code>on&delay</code>.</li>
+                            </ul>
+                        </div>
+
+                        <div class="sub-guide-card p-6 rounded-lg">
+                            <h3 class="text-xl font-bold text-sky-400 mb-3">Balasan Status Otomatis</h3>
+                            <p class="text-slate-300 leading-relaxed">Setelah melihat status, bot dapat memberikan respons otomatis untuk menciptakan interaksi yang lebih personal.</p>
+                            <ul class="mt-4 space-y-4 list-disc pl-5 text-slate-300">
+                                <li><strong>Balasan Pesan (STATUS_VIEW_MSG):</strong> Kirim pesan balasan yang telah ditentukan.
+                                    <p class="mt-2">Contoh: <code>.setvar STATUS_VIEW_MSG=Wah, keren statusnya!</code></p>
+                                </li>
+                                <li><strong>Reaksi Emoji (STATUS_VIEW_EMOJI):</strong> Beri reaksi emoji acak. Cara cepat untuk berinteraksi.
+                                    <p class="mt-2">Contoh: <code>.setvar STATUS_VIEW_EMOJI=🔥,👍,💯</code></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Tab 4: Moderasi Grup -->
+                    <div data-tab-content="guide-4" class="guide-card p-6 md:p-8 rounded-xl space-y-8 hidden">
+                        <div class="text-center">
+                            <h2 class="text-2xl font-bold text-white mb-2">Moderasi Grup & Keamanan</h2>
+                            <p class="text-slate-400">Jaga komunitas Anda tetap bersih, aman, dan kondusif dengan fitur moderasi otomatis.</p>
+                        </div>
+                        <hr class="border-slate-700">
+
+                        <div class="sub-guide-card p-6 rounded-lg">
+                            <h3 class="text-xl font-bold text-sky-400 mb-3">Moderasi Konten</h3>
+                            <ul class="mt-4 space-y-4 list-disc pl-5 text-slate-300">
+                                <li><strong>Anti-Pesan Dihapus (ANTI_DELETE):</strong> Tangkap dan tampilkan kembali pesan yang dihapus. Mode: <code>p</code> (privat), <code>g</code> (grup), <code>jid</code> (spesifik).</li>
+                                <li><strong>Anti-Link (ANTILINK):</strong> Senjata utama melawan spammer. Aktifkan dengan <code>.antilink on</code>.</li>
+                                <li><strong>Anti-Kata Kasar (ANTIWORDS):</strong> Jaga percakapan tetap positif. Atur kata dengan <code>.setvar ANTIWORDS=...</code>.</li>
+                                <li><strong>Anti-Spam (ANTISPAM):</strong> Mencegah pengguna mengirim pesan berlebihan (flood).</li>
+                            </ul>
+                        </div>
+
+                        <div class="sub-guide-card p-6 rounded-lg">
+                             <h3 class="text-xl font-bold text-sky-400 mb-3">Sistem Peringatan (Warning)</h3>
+                             <p class="text-slate-300 leading-relaxed">Bangun sistem keadilan yang transparan sebelum mengambil tindakan.</p>
+                             <ul class="mt-4 space-y-4 list-disc pl-5 text-slate-300">
+                                <li><strong>Batas Peringatan (WARN_LIMIT):</strong> Tentukan jumlah pelanggaran maksimal sebelum kick otomatis. Contoh: <code>.setvar WARN_LIMIT=3</code>.</li>
+                                <li><strong>Pesan Peringatan (WARN_MESSAGE):</strong> Kustomisasi pesan peringatan dengan variabel <code>&mention</code>, <code>&warn</code>, dll.</li>
+                             </ul>
+                        </div>
+                        
+                        <div class="sub-guide-card p-6 rounded-lg">
+                             <h3 class="text-xl font-bold text-sky-400 mb-3">Moderasi Anggota & Akses</h3>
+                             <p class="text-slate-300 leading-relaxed">Kendalikan siapa yang bisa bergabung dan apa yang bisa mereka lakukan di dalam grup.</p>
+                             <ul class="mt-4 space-y-4 list-disc pl-5 text-slate-300">
+                                 <li><strong>Admin Grup (GROUP_ADMINS):</strong> Delegasikan tugas dengan aman. Beri izin anggota tepercaya untuk menggunakan perintah admin bot tanpa menjadi admin grup WhatsApp.</li>
+                                 <li><strong>Tolak Panggilan (REJECT_CALL):</strong> Lindungi akun bot dari panggilan spam. Bot akan otomatis menolak panggilan masuk dari non-Sudo.</li>
+                                 <li><strong>Nonaktifkan Bot (DISABLE_BOT):</strong> Hentikan fungsi bot sementara di grup atau untuk pengguna spesifik tanpa mengeluarkannya.</li>
+                             </ul>
+                        </div>
+                    </div>
+
+                    <!-- Tab 5: Konfigurasi Teknis -->
+                    <div data-tab-content="guide-5" class="guide-card p-6 md:p-8 rounded-xl space-y-8 hidden">
+                         <div class="text-center">
+                            <h2 class="text-2xl font-bold text-white mb-2">Skalabilitas & Konfigurasi Teknis</h2>
+                            <p class="text-slate-400">Untuk pengguna mahir yang ingin memaksimalkan potensi bot.</p>
+                        </div>
+                        <hr class="border-slate-700">
+                        
+                        <div class="sub-guide-card p-6 rounded-lg">
+                            <h3 class="text-xl font-bold text-sky-400 mb-3">Pemeliharaan & Sesi</h3>
+                            <ul class="mt-4 space-y-4 list-disc pl-5 text-slate-300">
+                                <li><strong>Update Otomatis (AUTO_UPDATE):</strong> Pastikan bot selalu menjalankan versi terbaru.
+                                     <blockquote class="mt-2 border-l-4 border-slate-600 pl-4 text-slate-400 italic">Nonaktifkan jika Anda lebih suka memperbarui secara manual.</blockquote>
+                                </li>
+                                <li><strong>Paksa Logout (FORCE_LOGOUT):</strong> Tombol "reset darurat" jika bot mengalami masalah koneksi persisten.</li>
+                            </ul>
+                        </div>
+                        <div class="sub-guide-card p-6 rounded-lg">
+                             <h3 class="text-xl font-bold text-sky-400 mb-3">Kunci API & Konfigurasi Eksternal</h3>
+                             <p class="text-slate-300 leading-relaxed"><strong>Kunci Remove.bg (RMBG_KEY):</strong> Aktifkan fitur premium penghapus latar belakang dengan <code>.rmbg</code>. Anda perlu kunci API dari situs remove.bg.</p>
+                             <p class="text-slate-300 leading-relaxed mt-4">Contoh: <code>.setvar RMBG_KEY=kunci_api_anda_disini</code></p>
+                        </div>
+                    </div>
+                    
+                    <!-- Tab 7: Tips & Trik -->
+                    <div data-tab-content="guide-7" class="guide-card p-6 md:p-8 rounded-xl space-y-8 hidden">
+                         <div class="text-center">
+                            <h2 class="text-2xl font-bold text-white mb-2">Tips dan Praktik Terbaik</h2>
+                            <p class="text-slate-400">Naik dari pengguna biasa menjadi master SharilBotz dengan strategi ini.</p>
+                        </div>
+                        <hr class="border-slate-700">
+                        
+                         <div class="sub-guide-card p-6 rounded-lg">
+                             <ul class="space-y-4 list-disc pl-5 text-slate-300">
+                                <li><strong>Gunakan <code>.tag all</code> dengan Sangat Bijak:</strong> Simpan hanya untuk pengumuman yang benar-benar krusial.</li>
+                                <li><strong>Bangun Sistem Moderasi Berlapis:</strong> Kombinasikan <code>ANTILINK</code>, <code>ANTIWORDS</code>, dan <code>WARN_LIMIT=3</code> untuk sistem yang adil.</li>
+                                <li><strong>Gunakan <code>.reboot</code> Setelah Perubahan Besar:</strong> Pastikan semua pengaturan baru dimuat dengan benar.</li>
+                                <li><strong>Audit Perintah Publik Secara Berkala:</strong> Periksa daftar perintah publik dengan <code>.yami</code> untuk memastikan tidak ada perintah sensitif yang terbuka.</li>
+                                <li><strong>Ciptakan Persona untuk Bot Anda:</strong> Berikan bot "kepribadian" melalui pesan kustom dengan gaya bahasa yang konsisten.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Commands Section -->
+        <section id="commands" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Kamus Perintah Lengkap</h2>
+                    <p class="text-slate-400 max-w-2xl mx-auto">Referensi cepat untuk semua perintah yang tersedia. Pilih kategori untuk memulai.</p>
+                </div>
+
+                <!-- Tabs -->
+                <div id="command-tabs" class="mb-8 flex flex-wrap justify-center gap-2 md:gap-3">
+                    <button data-tab="admin" class="tab-button active text-xs sm:text-sm font-semibold px-3 py-2 rounded-full transition-colors">Administrasi</button>
+                    <button data-tab="tools" class="tab-button text-xs sm:text-sm font-semibold px-3 py-2 rounded-full transition-colors">Utilitas</button>
+                    <button data-tab="downloader" class="tab-button text-xs sm:text-sm font-semibold px-3 py-2 rounded-full transition-colors">Unduhan</button>
+                    <button data-tab="media" class="tab-button text-xs sm:text-sm font-semibold px-3 py-2 rounded-full transition-colors">Manipulasi Media</button>
+                    <button data-tab="sticker" class="tab-button text-xs sm:text-sm font-semibold px-3 py-2 rounded-full transition-colors">Editor Stiker</button>
+                    <button data-tab="ai" class="tab-button text-xs sm:text-sm font-semibold px-3 py-2 rounded-full transition-colors">Fitur AI</button>
+                    <button data-tab="fun" class="tab-button text-xs sm:text-sm font-semibold px-3 py-2 rounded-full transition-colors">Hiburan</button>
+                    <button data-tab="management" class="tab-button text-xs sm:text-sm font-semibold px-3 py-2 rounded-full transition-colors">Manajemen</button>
+                </div>
+
+                <!-- Tab Content -->
+                <div id="command-content" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Commands will be injected here by JavaScript -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 bg-slate-900">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Pertanyaan yang Sering Diajukan</h2>
+                    <p class="text-slate-400">Punya pertanyaan? Kami punya jawaban.</p>
+                </div>
+                <div id="faq-accordion" class="space-y-4">
+                    <!-- FAQ items will be injected by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800">
+        <div class="container mx-auto px-6 py-8 text-center text-slate-400">
+            <p>&copy; 2024 SharilBotz. All rights reserved.</p>
+            <p class="mt-1">Ditulis oleh Syahril Akbar</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ Accordion
+        const faqAccordion = document.getElementById('faq-accordion');
+        if (faqAccordion) {
+            faqAccordion.addEventListener('click', (e) => {
+                const question = e.target.closest('.faq-question');
+                if (question) {
+                    const currentlyActive = faqAccordion.querySelector('.faq-question.active');
+                    if (currentlyActive && currentlyActive !== question) {
+                        currentlyActive.classList.remove('active');
+                        currentlyActive.querySelector('svg').classList.remove('rotate-180');
+                    }
+
+                    question.classList.toggle('active');
+                    question.querySelector('svg').classList.toggle('rotate-180');
+                }
+            });
+        }
+        
+        // Command Data (Lengkap dari PDF)
+        const commandsData = {
+            admin: [
+                { cmd: ".add", desc: "Menambahkan anggota baru ke grup." },
+                { cmd: ".demote", desc: "Menurunkan status admin dari seorang anggota." },
+                { cmd: ".ginfo", desc: "Menampilkan info grup dari link undangan." },
+                { cmd: ".gpdesc", desc: "Mengubah deskripsi grup." },
+                { cmd: ".gpname", desc: "Mengubah nama (subjek) grup." },
+                { cmd: ".gpp", desc: "Mengubah gambar profil grup (balas gambar)." },
+                { cmd: ".inactive", desc: "Mengidentifikasi & mengeluarkan anggota tidak aktif." },
+                { cmd: ".invite", desc: "Menampilkan tautan undangan grup saat ini." },
+                { cmd: ".join", desc: "Membuat bot bergabung ke grup via link." },
+                { cmd: ".kick / .kik", desc: "Mengeluarkan anggota dari grup." },
+                { cmd: ".left", desc: "Membuat bot keluar dari grup saat ini." },
+                { cmd: ".mute", desc: "Menutup grup, hanya admin bisa kirim pesan." },
+                { cmd: ".promote", desc: "Menaikkan status anggota menjadi admin." },
+                { cmd: ".revoke", desc: "Mereset tautan undangan grup." },
+                { cmd: ".tag", desc: "Menyebut (mention) anggota grup (all, admin, notadmin)." },
+                { cmd: ".unmute", desc: "Membuka grup, semua anggota bisa kirim pesan." }
+            ],
+            tools: [
+                { cmd: ".7zip", desc: "Mengompres atau mengekstrak file 7zip." },
+                { cmd: ".age", desc: "Menghitung umur berdasarkan tanggal lahir (DD/MM/YYYY)." },
+                { cmd: ".dado", desc: "Melempar dadu acak." },
+                { cmd: ".doc", desc: "Mengubah media (gambar/video) menjadi dokumen." },
+                { cmd: ".fancy", desc: "Mengubah teks biasa menjadi berbagai gaya tulisan unik." },
+                { cmd: ".find", desc: "Mencari lagu berdasarkan audio yang dibalas (Shazam)." },
+                { cmd: ".fullpp", desc: "Mengatur foto profil tanpa memotong (crop)." },
+                { cmd: ".fullss", desc: "Screenshot satu halaman web penuh." },
+                { cmd: ".jid", desc: "Mendapatkan ID unik pengguna atau grup." },
+                { cmd: ".qr", desc: "Membuat atau membaca kode QR." },
+                { cmd: ".readmore", desc: "Membuat teks dengan efek 'Baca Selengkapnya'." },
+                { cmd: ".ss", desc: "Mengambil screenshot tampilan awal halaman web." },
+                { cmd: ".sysinfo", desc: "Menampilkan info teknis server bot." },
+                { cmd: ".time", desc: "Menampilkan waktu saat ini untuk kota tertentu." },
+                { cmd: ".trt", desc: "Menerjemahkan teks (balas pesan)." },
+                { cmd: ".tts", desc: "Mengubah teks menjadi suara (Text-to-Speech)." },
+                { cmd: ".url", desc: "Mengunggah media dan menjadikannya URL." },
+                { cmd: ".virus", desc: "Menganalisis file dengan VirusTotal." },
+                { cmd: ".weather", desc: "Menampilkan info cuaca terkini." },
+                { cmd: ".whois", desc: "Menampilkan info detail tentang pengguna." }
+            ],
+            downloader: [
+                { cmd: ".apk", desc: "Mencari dan mengunduh file APK dari APKMirror." },
+                { cmd: ".fb", desc: "Mengunduh video dari tautan Facebook." },
+                { cmd: ".gdirect / .mdrive", desc: "Mengunduh file dari tautan Google Drive." },
+                { cmd: ".img", desc: "Mencari dan mengunduh gambar dari Google." },
+                { cmd: ".insta / .story", desc: "Mengunduh post, reel, atau story dari Instagram." },
+                { cmd: ".mediafire", desc: "Mengunduh file dari tautan Mediafire." },
+                { cmd: ".movie", desc: "Mencari informasi detail film dari OMDB." },
+                { cmd: ".pinterest", desc: "Mengunduh video atau gambar dari Pinterest." },
+                { cmd: ".play / .song / .yta", desc: "Mencari dan mengunduh lagu (audio) dari YouTube." },
+                { cmd: ".reddit", desc: "Mengunduh video dari postingan Reddit." },
+                { cmd: ".spotify", desc: "Mengunduh lagu atau playlist dari Spotify." },
+                { cmd: ".tiktok / .stt", desc: "Mengunduh video dari tautan TikTok." },
+                { cmd: ".twitter", desc: "Mengunduh video dari tautan Twitter." },
+                { cmd: ".video / .ytv", desc: "Mencari dan mengunduh video dari YouTube." },
+                { cmd: ".yts", desc: "Melakukan pencarian di YouTube." },
+                { cmd: ".xxx", desc: "Mencari konten dewasa (NSFW). Gunakan dengan bijak." }
+            ],
+            media: [
+                { cmd: ".avec", desc: "Konversi audio menjadi video dengan latar default." },
+                { cmd: ".avm", desc: "Menggabungkan file audio dan video." },
+                { cmd: ".bass", desc: "Meningkatkan level bass pada audio." },
+                { cmd: ".black", desc: "Konversi audio menjadi video dengan latar hitam." },
+                { cmd: ".compress", desc: "Mengompres video untuk mengurangi ukuran." },
+                { cmd: ".crop", desc: "Memotong (crop) video ke dimensi tertentu." },
+                { cmd: ".cut / .trim", desc: "Memotong segmen audio/video berdasarkan waktu." },
+                { cmd: ".deep / .fat / .slow / .fast", desc: "Berbagai modulator audio untuk efek suara." },
+                { cmd: ".earrape", desc: "Meningkatkan volume audio secara ekstrem. Awas!" },
+                { cmd: ".histo", desc: "Membuat visualisasi histogram audio." },
+                { cmd: ".low / .pitch", desc: "Mengubah tinggi rendahnya nada (pitch) audio." },
+                { cmd: ".merge", desc: "Menggabungkan beberapa klip video menjadi satu." },
+                { cmd: ".mp3", desc: "Konversi video/audio menjadi file MP3." },
+                { cmd: ".mp4", desc: "Konversi stiker animasi menjadi video MP4." },
+                { cmd: ".nightcore", desc: "Menerapkan efek Nightcore pada audio." },
+                { cmd: ".reverse", desc: "Memutar balik pemutaran video atau audio." },
+                { cmd: ".rotate", desc: "Memutar video (right/left/flip)." },
+                { cmd: ".treble", desc: "Meningkatkan level treble pada audio." },
+                { cmd: ".vector", desc: "Membuat visualisasi vektor dari file audio." },
+                { cmd: ".voice", desc: "Mengubah teks menjadi catatan suara (voice note)." }
+            ],
+            sticker: [
+                { cmd: ".cc / .cs / .rc", desc: "Membuat stiker format persegi, lingkaran, sudut tumpul." },
+                { cmd: ".circle", desc: "Memotong gambar menjadi lingkaran & jadi stiker." },
+                { cmd: ".emix", desc: "Mencampur dua emoji menjadi satu stiker baru yang unik." },
+                { cmd: ".exif", desc: "Mengekstrak metadata dari stiker." },
+                { cmd: ".photo", desc: "Mengubah stiker kembali menjadi file gambar." },
+                { cmd: ".pt", desc: "Cari gambar Pinterest & langsung jadi stiker 1:1." },
+                { cmd: ".qc", desc: "Membuat stiker dari kutipan teks (quote)." },
+                { cmd: ".rmbg", desc: "Menghapus latar belakang gambar (perlu API key)." },
+                { cmd: ".sticker", desc: "Perintah utama ubah gambar/video jadi stiker." },
+                { cmd: ".take", desc: "Mengganti metadata stiker yang sudah ada." },
+                { cmd: ".tenor", desc: "Mencari GIF di Tenor & jadi stiker animasi." },
+                { cmd: ".tg", desc: "Mengunduh stiker dari paket stiker Telegram." },
+                { cmd: ".upscale", desc: "Meningkatkan kualitas dan resolusi gambar." },
+                { cmd: "Efek Foto", desc: "Filter seperti .cartoon, .pencil, .wanted, .zombie, dll." }
+            ],
+            ai: [
+                { cmd: ".bing", desc: "Berinteraksi dengan Bing AI." },
+                { cmd: ".dall", desc: "Membuat gambar dari teks dengan DALL-E." },
+                { cmd: ".gemini", desc: "Mengakses model AI Gemini dari Google." },
+                { cmd: ".gpt", desc: "Berinteraksi dengan model ChatGPT." },
+                { cmd: ".gr", desc: "Transkripsi audio ke teks / baca teks dari gambar (OCR)." },
+                { cmd: ".groq", desc: "Berinteraksi dengan model AI Groq yang cepat." },
+                { cmd: ".jean", desc: "Melakukan pencarian Google sederhana." }
+            ],
+            fun: [
+                { cmd: ".afk", desc: "Mengatur status AFK (Away From Keyboard)." },
+                { cmd: ".couple / .ship", desc: "Mencari pasangan acak di dalam grup." },
+                { cmd: ".slap", desc: "Mengirim pesan 'menampar' pengguna." },
+                { cmd: ".tictactoe", desc: "Memulai permainan Tic-Tac-Toe." },
+                { cmd: ".wcg / .wrg", desc: "Memulai permainan kata seperti Rantai Kata." },
+                { cmd: ".waifu", desc: "Mengunduh gambar karakter anime (waifu)." }
+            ],
+            management: [
+                { cmd: ".amute / .aunmute", desc: "Menjadwalkan tutup/buka grup otomatis." },
+                { cmd: ".areact", desc: "Mengatur reaksi otomatis untuk kata kunci." },
+                { cmd: ".backup", desc: "Mengelola operasi pencadangan data bot." },
+                { cmd: ".block / .unblock", desc: "Memblokir/buka blokir pengguna dari bot." },
+                { cmd: ".clear / .dlt", desc: "Menghapus pesan di chat." },
+                { cmd: ".filter / .gfilter / .pfilter", desc: "Mengatur balasan otomatis (autoreply)." },
+                { cmd: ".forward", desc: "Meneruskan pesan yang dibalas ke JID lain." },
+                { cmd: ".note", desc: "Menyimpan dan mengelola catatan pribadi." },
+                { cmd: ".pdm", desc: "Mengaktifkan/nonaktifkan notifikasi promote/demote." },
+                { cmd: ".plugin", desc: "Menginstal atau melihat daftar plugin eksternal." },
+                { cmd: ".reboot", desc: "Memulai ulang (restart) bot." },
+                { cmd: ".remove", desc: "Menghapus plugin yang sudah terinstal." },
+                { cmd: ".save", desc: "Menyimpan pesan penting ke chat pribadi Sudo." },
+                { cmd: ".setschedule / .getschedule", desc: "Mengelola pesan terjadwal." },
+                { cmd: ".setstatus", desc: "Mengatur status 'About' atau status harian." },
+                { cmd: ".setvar / .getvar / .delvar", desc: "Mengelola variabel konfigurasi bot." },
+                { cmd: ".tog", desc: "Mengaktifkan atau menonaktifkan perintah tertentu." },
+                { cmd: ".update / .update now", desc: "Memeriksa dan menginstal pembaruan bot." },
+                { cmd: ".zushi / .yami / .ope", desc: "Mengelola izin publik untuk perintah." }
+            ]
+        };
+        
+        // FAQ Data (Lengkap dari PDF)
+        const faqData = [
+            { q: "Bagaimana cara update status WhatsApp menggunakan bot?", a: "Gunakan perintah <code>.setstatus [teks status Anda]</code>. Penting: Fitur ini hanya akan bekerja untuk kontak yang sudah Anda simpan sebelum sesi bot dimulai. Gunakan <code>.contacts</code> untuk mengimpor daftar kontak Anda ke bot." },
+            { q: "Bagaimana cara mengaktifkan balasan otomatis untuk status?", a: "Pastikan <code>AUTO_STATUS_VIEW</code> aktif (<code>.setvar AUTO_STATUS_VIEW=on</code>), lalu atur pesan dengan <code>.setvar STATUS_VIEW_MSG=Keren statusnya!</code>. Detail ada di Panduan Otomatisasi Status." },
+            { q: "Bagaimana cara mengaktifkan reaksi otomatis (like) pada status?", a: "Aktifkan view status dengan <code>.setvar AUTO_STATUS_VIEW=on</code>. Kemudian, daftarkan emoji yang ingin digunakan dengan <code>.setvar STATUS_VIEW_EMOJI=🔥,👍,💯</code>. Bot akan memilih secara acak." },
+            { q: "Bagaimana cara memperbarui bot saya?", a: "Periksa pembaruan dengan <code>.update</code>, lalu terapkan dengan <code>.update now</code>. Untuk otomatisasi, aktifkan dengan <code>.setvar AUTO_UPDATE=true</code>." },
+            { q: "Bagaimana cara menghentikan reaksi emoji pada perintah?", a: "Cukup nonaktifkan dengan <code>.setvar CMD_REACTION=false</code>. Untuk mengaktifkannya kembali, gunakan <code>true</code>." },
+            { q: "Bagaimana cara membuat bot menjadi publik?", a: "Gunakan <code>.zushi [nama_perintah]</code> (misal: <code>.zushi ping</code>). Untuk melihat daftar perintah publik, gunakan <code>.yami</code>. Untuk menarik akses, gunakan <code>.ope [nama_perintah]</code>." },
+            { q: "Bagaimana cara mengatur pesan selamat datang & selamat tinggal?", a: "Gunakan <code>.welcome</code> dan <code>.goodbye</code> dengan variabel: <code>&mention</code>, <code>&name</code> (nama grup), <code>&size</code> (jumlah anggota), <code>&pp</code> (foto profil), <code>&desc</code> (deskripsi). Contoh: <code>.welcome Hai &mention! Selamat datang di &name</code>. Nonaktifkan dengan <code>.welcome off</code>." },
+            { q: "Bagaimana cara mengatur pesan 'alive'?", a: "Kustomisasi pesan cek status bot dengan variabel: <code>#uptime</code> (waktu aktif), <code>#quote</code> (kutipan acak), <code>&gif</code> (kirim GIF). Anda juga bisa menambahkan URL gambar/video. Contoh: <code>.alive Bot aktif selama: #uptime. #quote</code>." },
+            { q: "Apa fungsi perintah 'mention'?", a: "Ini adalah balasan otomatis saat seseorang menyebut (mention) nama Anda (bukan bot). Sangat berguna saat Anda sibuk. Contoh: <code>.mention Maaf, saya sedang sibuk.</code>. Anda juga bisa menyertakan media." },
+            { q: "Bagaimana cara membuat balasan otomatis kustom (autoreply)?", a: "Gunakan <code>.filter 'kata' 'balasan'</code> (untuk chat ini), <code>.gfilter</code> (untuk semua grup), atau <code>.pfilter</code> (untuk semua chat pribadi). Hentikan dengan <code>.stop</code>, <code>.gstop</code>, atau <code>.pstop</code>." },
+            { q: "Bagaimana cara mengaktifkan notifikasi promosi/demosi admin?", a: "Cukup gunakan perintah <code>.pdm on</code>. Bot akan mengirim notifikasi di grup setiap kali ada perubahan status admin." },
+            { q: "Bagaimana cara menjadwalkan pesan?", a: "Gunakan <code>.setschedule [waktu] [pesan]</code>. Jadwal Harian: <code>.setschedule 08:00 Selamat pagi!</code>. Jadwal Sekali Waktu: <code>.setschedule 20/12/2025 20:00 Pengingat acara!</code>. Kelola dengan <code>.getschedule</code> dan <code>.delschedule</code>." },
+            { q: "Bagaimana cara membuka/menutup grup secara otomatis?", a: "Gunakan <code>.amute [waktu]</code> untuk tutup dan <code>.aunmute [waktu]</code> untuk buka. Contoh: <code>.amute 22:00</code>. Pastikan <code>TIMEZONE</code> Anda benar." },
+            { q: "Apa itu JID?", a: "JID (Jabber ID) adalah alamat unik untuk setiap akun/grup WhatsApp. Dapatkan dengan membalas pesan target dan mengetik <code>.jid</code>. Penting untuk menargetkan perintah seperti <code>DISABLE_BOT</code>." },
+            { q: "Bagaimana cara kerja fitur anti-link?", a: "Sangat fleksibel. Aktifkan dengan <code>.antilink on</code>. Atur whitelist (izin): <code>.antilink instagram.com</code>. Atur blacklist (blokir): <code>.antilink tiktok.com</code>. Atur sanksi: <code>.antilink action/kick</code>, <code>action/warn</code>, atau <code>action/null</code>." }
+        ];
+
+        // Render Functions
+        function renderCommands(category) {
+            const contentEl = document.getElementById('command-content');
+            contentEl.innerHTML = '';
+            commandsData[category].forEach(command => {
+                const card = document.createElement('div');
+                card.className = 'command-card p-6 rounded-lg border border-slate-700';
+                card.innerHTML = `
+                    <h4 class="font-bold text-sky-400 text-lg">${command.cmd}</h4>
+                    <p class="text-slate-400 mt-1 text-sm">${command.desc}</p>
+                `;
+                contentEl.appendChild(card);
+            });
+        }
+        
+        function renderFAQs() {
+            const accordionEl = document.getElementById('faq-accordion');
+            accordionEl.innerHTML = '';
+            faqData.forEach(faq => {
+                const item = document.createElement('div');
+                item.className = 'faq-item rounded-lg overflow-hidden border border-slate-700';
+                item.innerHTML = `
+                    <button class="faq-question w-full flex justify-between items-center text-left p-6 font-semibold text-white focus:outline-none">
+                        <span>${faq.q}</span>
+                        <svg class="w-6 h-6 transform transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-answer bg-slate-800/50 text-slate-300 px-6">
+                        <div class="py-4 border-t border-slate-700">${faq.a}</div>
+                    </div>
+                `;
+                accordionEl.appendChild(item);
+            });
+        }
+
+        // Command Tabs Logic
+        const commandTabs = document.getElementById('command-tabs');
+        if (commandTabs) {
+            commandTabs.addEventListener('click', (e) => {
+                if (e.target.tagName === 'BUTTON') {
+                    commandTabs.querySelector('.tab-button.active').classList.remove('active');
+                    e.target.classList.add('active');
+                    renderCommands(e.target.dataset.tab);
+                }
+            });
+            // Initial render
+            renderCommands('admin');
+        }
+
+        // Guide Tabs Logic
+        const guideTabs = document.getElementById('guide-tabs');
+        const guideContents = document.querySelectorAll('[data-tab-content]');
+        if (guideTabs) {
+            guideTabs.addEventListener('click', (e) => {
+                 if (e.target.tagName === 'BUTTON') {
+                    guideTabs.querySelector('.guide-tab-button.active').classList.remove('active');
+                    e.target.classList.add('active');
+                    
+                    const targetTab = e.target.dataset.tab;
+                    guideContents.forEach(content => {
+                        if (content.dataset.tabContent === targetTab) {
+                            content.classList.remove('hidden');
+                        } else {
+                            content.classList.add('hidden');
+                        }
+                    });
+                 }
+            });
+        }
+        
+        // Initial FAQ render
+        renderFAQs();
+
+    </script>
+</body>
+</html>
